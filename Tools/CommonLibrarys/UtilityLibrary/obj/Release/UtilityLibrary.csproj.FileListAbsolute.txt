@@ -1,9 +1,0 @@
-E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\UtilityLibrary.dll
-E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\UtilityLibrary.pdb
-E:\ProjectDL\trunk\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.csprojResolveAssemblyReference.cache
-E:\ProjectDL\trunk\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.dll
-E:\ProjectDL\trunk\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.pdb
-D:\GitHub\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.csprojAssemblyReference.cache
-D:\GitHub\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.csproj.CoreCompileInputs.cache
-D:\GitHub\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.dll
-D:\GitHub\Tools\CommonLibrarys\UtilityLibrary\obj\Release\UtilityLibrary.pdb

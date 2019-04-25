@@ -1,9 +1,0 @@
-E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\bin\Release\ProtocolObjectParserLib.dll
-E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\bin\Release\ProtocolObjectParserLib.pdb
-E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.csprojResolveAssemblyReference.cache
-E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.dll
-E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.pdb
-D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.csprojAssemblyReference.cache
-D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.csproj.CoreCompileInputs.cache
-D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.dll
-D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolObjectParserLib\obj\Release\ProtocolObjectParserLib.pdb
