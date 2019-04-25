@@ -12,3 +12,7 @@
 /Server/TestApp/bin/
 /ThirdParty/Google.Protobuf/obj
 /Tools/.vs
+/Tools/Proto2CS/.vs
+/Tools/Proto2CS/bin
+/Tools/Proto2CS/obj
+/ThirdParty/Google.Protobuf/bin/
