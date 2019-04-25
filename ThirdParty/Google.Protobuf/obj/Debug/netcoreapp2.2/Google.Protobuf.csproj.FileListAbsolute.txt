@@ -1,4 +1,0 @@
-D:\GitHub\RenDu_CSharp\ThirdParty\Google.Protobuf\bin\Debug\netcoreapp2.2\Google.Protobuf.deps.json
-D:\GitHub\RenDu_CSharp\ThirdParty\Google.Protobuf\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
-D:\GitHub\RenDu_CSharp\ThirdParty\Google.Protobuf\bin\Debug\netcoreapp2.2\Google.Protobuf.pdb
-D:\GitHub\RenDu_CSharp\ThirdParty\Google.Protobuf\bin\Debug\netcoreapp2.2\Google.Protobuf.xml
