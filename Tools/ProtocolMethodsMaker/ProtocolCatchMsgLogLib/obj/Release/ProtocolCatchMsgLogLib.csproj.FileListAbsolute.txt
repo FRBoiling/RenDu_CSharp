@@ -1,0 +1,13 @@
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\bin\Release\ProtocolCatchMsgLogLib.dll
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\bin\Release\ProtocolCatchMsgLogLib.pdb
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\bin\Release\Logger.dll
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\bin\Release\Logger.pdb
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\bin\Release\ProtocolCatchMsgLogLib.dll
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\bin\Release\ProtocolCatchMsgLogLib.pdb
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.csprojResolveAssemblyReference.cache
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.dll
+E:\ProjectDL\trunk\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.pdb
+D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.csprojAssemblyReference.cache
+D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.csproj.CoreCompileInputs.cache
+D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.dll
+D:\GitHub\Tools\ProtocolMethodsMaker\ProtocolCatchMsgLogLib\obj\Release\ProtocolCatchMsgLogLib.pdb

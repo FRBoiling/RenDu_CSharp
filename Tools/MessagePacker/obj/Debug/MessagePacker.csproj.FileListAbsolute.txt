@@ -1,0 +1,10 @@
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\MessagePacker.dll
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\MessagePacker.pdb
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\Google.Protobuf.dll
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\Logger.dll
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\ProtocolCatchMsgLogLib.dll
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\ProtocolCatchMsgLogLib.pdb
+E:\ProjectDL\trunk\Common\MessagePacker\bin\Debug\Logger.pdb
+E:\ProjectDL\trunk\Common\MessagePacker\obj\Debug\MessagePacker.csprojResolveAssemblyReference.cache
+E:\ProjectDL\trunk\Common\MessagePacker\obj\Debug\MessagePacker.dll
+E:\ProjectDL\trunk\Common\MessagePacker\obj\Debug\MessagePacker.pdb

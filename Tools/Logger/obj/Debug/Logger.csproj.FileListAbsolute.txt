@@ -1,0 +1,4 @@
+E:\ProjectDL\trunk\Bin\Server\Logger.dll
+E:\ProjectDL\trunk\Bin\Server\Logger.pdb
+E:\ProjectDL\trunk\Common\Logger\obj\Debug\Logger.dll
+E:\ProjectDL\trunk\Common\Logger\obj\Debug\Logger.pdb

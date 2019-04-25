@@ -1,0 +1,9 @@
+E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\TcpLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\TcpLibrary.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\CommunicationLibrary.csprojResolveAssemblyReference.cache
+E:\ProjectDL\trunk\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\TcpLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\TcpLibrary.pdb
+D:\GitHub\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\CommunicationLibrary.csprojAssemblyReference.cache
+D:\GitHub\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\CommunicationLibrary.csproj.CoreCompileInputs.cache
+D:\GitHub\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\TcpLibrary.dll
+D:\GitHub\Tools\CommonLibrarys\CommunicationLibrary\obj\Release\TcpLibrary.pdb

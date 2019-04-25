@@ -1,0 +1,15 @@
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\ModelLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\ModelLibrary.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\Logger.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\UtilityLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\XmlDataPropertyLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\Logger.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\UtilityLibrary.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\bin\Release\XmlDataPropertyLibrary.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.csprojResolveAssemblyReference.cache
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.pdb
+D:\GitHub\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.csprojAssemblyReference.cache
+D:\GitHub\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.csproj.CoreCompileInputs.cache
+D:\GitHub\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.dll
+D:\GitHub\Tools\CommonLibrarys\ModelLibrary\obj\Release\ModelLibrary.pdb

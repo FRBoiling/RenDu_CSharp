@@ -1,0 +1,12 @@
+E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\XmlDataPropertyLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\bin\Release\XmlDataPropertyLibrary.pdb
+E:\ProjectDL\trunk\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.csprojResolveAssemblyReference.cache
+E:\ProjectDL\trunk\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.dll
+E:\ProjectDL\trunk\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.pdb
+D:\GitHub\Tools\CommonLibrarys\bin\Release\XmlDataPropertyLibrary.dll
+D:\GitHub\Tools\CommonLibrarys\bin\Release\XmlDataPropertyLibrary.pdb
+D:\GitHub\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.csprojAssemblyReference.cache
+D:\GitHub\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.csproj.CoreCompileInputs.cache
+D:\GitHub\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.csproj.CopyComplete
+D:\GitHub\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.dll
+D:\GitHub\Tools\CommonLibrarys\XmlDataPropertyLibrary\obj\Release\XmlDataPropertyLibrary.pdb
