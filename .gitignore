@@ -2,3 +2,13 @@
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
+/.vs
+/Server/.vs/
+/Server/App/obj
+/Server/App/bin/
+/Server/Model/obj
+/Server/Model/bin/
+/Server/TestApp/obj
+/Server/TestApp/bin/
+/ThirdParty/Google.Protobuf/obj
+/Tools/.vs
