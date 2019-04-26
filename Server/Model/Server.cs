@@ -3,20 +3,20 @@ using Model.System;
 
 namespace Model
 {
-    public static class Game
+    public static class Server
     {
-        private static Scene scene;
+        private static Context context;
 
-        public static Scene Scene
+        public static Context Context
         {
             get
             {
-                if (scene != null)
+                if (context != null)
                 {
-                    return scene;
+                    return context;
                 }
-                scene = new Scene();
-                return scene;
+                context = new Context();
+                return context;
             }
         }
 
@@ -42,8 +42,8 @@ namespace Model
 
         public static void Close()
         {
-            scene.Dispose();
-            scene = null;
+            context.Dispose();
+            context = null;
             eventSystem = null;
             objectPool = null;
         }

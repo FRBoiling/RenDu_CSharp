@@ -2,15 +2,15 @@
 
 namespace Model
 {
-    public sealed class Scene : Entity
+    public sealed class Context : Entity
     {
         public string Name { get; set; }
 
-        public Scene()
+        public Context()
         {
         }
 
-        public Scene(long id) : base(id)
+        public Context(long id) : base(id)
         {
         }
 
