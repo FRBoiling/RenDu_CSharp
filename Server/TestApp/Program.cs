@@ -10,22 +10,24 @@ namespace TestApp
 
         private static void Main()
         {
-            SingletonSynchronizationContext _ = SingletonSynchronizationContext.Instance;
 
-            WaitTimeAsync(5000, WaitTimeFinishCallback);
+            new TestClass().test();
+            //SingletonSynchronizationContext _ = SingletonSynchronizationContext.Instance;
 
-            while (true)
-            {
-                SingletonSynchronizationContext.Instance.Update();
+            //WaitTimeAsync(5000, WaitTimeFinishCallback);
 
-                Thread.Sleep(1);
+            //while (true)
+            //{
+            //    SingletonSynchronizationContext.Instance.Update();
 
-                ++loopCount;
-                if (loopCount % 10000 == 0)
-                {
-                    Console.WriteLine($"loop count: {loopCount}");
-                }
-            }
+            //    Thread.Sleep(1);
+
+            //    ++loopCount;
+            //    if (loopCount % 10000 == 0)
+            //    {
+            //        Console.WriteLine($"loop count: {loopCount}");
+            //    }
+            //}
         }
 
         private static void WaitTimeAsync(int waitTime, Action action)

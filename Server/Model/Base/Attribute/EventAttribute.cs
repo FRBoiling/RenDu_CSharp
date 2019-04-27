@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Event
+namespace Model.RDAttribute
 {
     public class EventAttribute : BaseAttribute
     {

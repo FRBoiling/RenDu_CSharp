@@ -1,6 +1,4 @@
-﻿using Model.Base;
-using Model.Component;
-using Model.Event;
+﻿using Model.Component;
 using Model.Helper;
 using Model.Logger;
 using Model.RDAttribute;
@@ -11,7 +9,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 
-namespace Model.System
+namespace Model.Base
 {
     public enum DLLType
     {
@@ -85,63 +83,74 @@ namespace Model.System
             this.destroySystems.Clear();
             this.deserializeSystems.Clear();
 
-            foreach (Type type in types[typeof(ObjectSystemAttribute)])
+            List<Type> typesLst = types[typeof(ObjectSystemAttribute)];
+            if (typesLst != null)
             {
-                object[] attrs = type.GetCustomAttributes(typeof(ObjectSystemAttribute), false);
-
-                if (attrs.Length == 0)
+                foreach (Type type in typesLst)
                 {
-                    continue;
-                }
+                    object[] attrs = type.GetCustomAttributes(typeof(ObjectSystemAttribute), false);
 
-                object obj = Activator.CreateInstance(type);
+                    if (attrs.Length == 0)
+                    {
+                        continue;
+                    }
 
-                switch (obj)
-                {
-                    case IAwakeSystem objectSystem:
-                        this.awakeSystems.Add(objectSystem.Type(), objectSystem);
-                        break;
-                    case IUpdateSystem updateSystem:
-                        this.updateSystems.Add(updateSystem.Type(), updateSystem);
-                        break;
-                    case ILateUpdateSystem lateUpdateSystem:
-                        this.lateUpdateSystems.Add(lateUpdateSystem.Type(), lateUpdateSystem);
-                        break;
-                    case IStartSystem startSystem:
-                        this.startSystems.Add(startSystem.Type(), startSystem);
-                        break;
-                    case IDestroySystem destroySystem:
-                        this.destroySystems.Add(destroySystem.Type(), destroySystem);
-                        break;
-                    case ILoadSystem loadSystem:
-                        this.loadSystems.Add(loadSystem.Type(), loadSystem);
-                        break;
-                    case IChangeSystem changeSystem:
-                        this.changeSystems.Add(changeSystem.Type(), changeSystem);
-                        break;
-                    case IDeserializeSystem deserializeSystem:
-                        this.deserializeSystems.Add(deserializeSystem.Type(), deserializeSystem);
-                        break;
+                    object obj = Activator.CreateInstance(type);
+
+                    switch (obj)
+                    {
+                        case IAwakeSystem objectSystem:
+                            this.awakeSystems.Add(objectSystem.Type(), objectSystem);
+                            break;
+                        case IUpdateSystem updateSystem:
+                            this.updateSystems.Add(updateSystem.Type(), updateSystem);
+                            break;
+                        case ILateUpdateSystem lateUpdateSystem:
+                            this.lateUpdateSystems.Add(lateUpdateSystem.Type(), lateUpdateSystem);
+                            break;
+                        case IStartSystem startSystem:
+                            this.startSystems.Add(startSystem.Type(), startSystem);
+                            break;
+                        case IDestroySystem destroySystem:
+                            this.destroySystems.Add(destroySystem.Type(), destroySystem);
+                            break;
+                        case ILoadSystem loadSystem:
+                            this.loadSystems.Add(loadSystem.Type(), loadSystem);
+                            break;
+                        case IChangeSystem changeSystem:
+                            this.changeSystems.Add(changeSystem.Type(), changeSystem);
+                            break;
+                        case IDeserializeSystem deserializeSystem:
+                            this.deserializeSystems.Add(deserializeSystem.Type(), deserializeSystem);
+                            break;
+                    }
                 }
             }
+
+
+            typesLst = types[typeof(EventAttribute)];
 
             this.allEvents.Clear();
-            foreach (Type type in types[typeof(EventAttribute)])
+            if (typesLst != null)
             {
-                object[] attrs = type.GetCustomAttributes(typeof(EventAttribute), false);
-
-                foreach (object attr in attrs)
+                foreach (Type type in typesLst)
                 {
-                    EventAttribute aEventAttribute = (EventAttribute)attr;
-                    object obj = Activator.CreateInstance(type);
-                    IEvent iEvent = obj as IEvent;
-                    if (iEvent == null)
+                    object[] attrs = type.GetCustomAttributes(typeof(EventAttribute), false);
+
+                    foreach (object attr in attrs)
                     {
-                        Log.Error($"{obj.GetType().Name} 没有继承IEvent");
+                        EventAttribute aEventAttribute = (EventAttribute)attr;
+                        object obj = Activator.CreateInstance(type);
+                        IEvent iEvent = obj as IEvent;
+                        if (iEvent == null)
+                        {
+                            Log.Error($"{obj.GetType().Name} 没有继承IEvent");
+                        }
+                        this.RegisterEvent(aEventAttribute.Type, iEvent);
                     }
-                    this.RegisterEvent(aEventAttribute.Type, iEvent);
                 }
             }
+
 
             this.Load();
         }

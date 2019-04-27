@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using Model;
 using Model.Base;
 using Model.Component;
@@ -19,15 +20,17 @@ namespace App
 
         public static string ServerIP = "192.168.10.123";
 
+
         private static void Main(string[] args)
         {
 
             // 异步方法全部会回掉到主线程
             SynchronizationContext.SetSynchronizationContext(SingletonSynchronizationContext.Instance);
+            Log.Debug($"current thread id {Thread.CurrentThread.ManagedThreadId}");
 
             try
             {
-                //Server.EventSystem.Add(DLLType.Message, DllHelper.GetProtocolAssembly());
+                Server.EventSystem.Add(DLLType.Model, typeof(Server).Assembly);
 
                 //LogManager.Configuration.Variables["appType"] = $"{AppType}";
                 //LogManager.Configuration.Variables["appId"] = $"{AppId}";
