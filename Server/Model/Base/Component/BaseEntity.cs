@@ -5,15 +5,17 @@ using System.Linq;
 
 namespace Model.Base.Component
 {
-    public class Entity : AComponentWithId
+    public class BaseEntity : AComponentWithId
     {
         private Dictionary<Type, AComponent> componentDict = new Dictionary<Type, AComponent>();
+        private HashSet<AComponent> components = new HashSet<AComponent>();
 
-        public Entity()
+
+        public BaseEntity()
         {
         }
 
-        protected Entity(long id) : base(id)
+        protected BaseEntity(long id) : base(id)
         {
         }
 
@@ -38,6 +40,7 @@ namespace Model.Base.Component
                 }
             }
 
+            this.components.Clear();
             this.componentDict.Clear();
         }
 
@@ -53,6 +56,11 @@ namespace Model.Base.Component
 
             this.componentDict.Add(type, component);
 
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
+
             return component;
         }
 
@@ -66,6 +74,11 @@ namespace Model.Base.Component
             AComponent component = ComponentFactory.CreateWithParent(type, this, this.IsFromPool);
 
             this.componentDict.Add(type, component);
+
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
 
             return component;
         }
@@ -82,6 +95,10 @@ namespace Model.Base.Component
 
             this.componentDict.Add(type, component);
 
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
 
             return component;
         }
@@ -98,6 +115,10 @@ namespace Model.Base.Component
 
             this.componentDict.Add(type, component);
 
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
 
             return component;
         }
@@ -114,6 +135,11 @@ namespace Model.Base.Component
 
             this.componentDict.Add(type, component);
 
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
+
             return component;
         }
 
@@ -128,6 +154,11 @@ namespace Model.Base.Component
             K component = ComponentFactory.CreateWithParent<K, P1, P2, P3>(this, p1, p2, p3, this.IsFromPool);
 
             this.componentDict.Add(type, component);
+
+            if (component is ISerializeToEntity)
+            {
+                this.components.Add(component);
+            }
 
             return component;
         }
@@ -146,6 +177,7 @@ namespace Model.Base.Component
             }
 
             this.componentDict.Remove(type);
+            this.components.Remove(component);
 
             component.Dispose();
         }
@@ -163,6 +195,7 @@ namespace Model.Base.Component
             }
 
             this.componentDict.Remove(type);
+            this.components.Remove(component);
 
             component.Dispose();
         }
@@ -199,6 +232,15 @@ namespace Model.Base.Component
                 base.EndInit();
 
                 this.componentDict.Clear();
+
+                if (this.components != null)
+                {
+                    foreach (AComponent component in this.components)
+                    {
+                        component.Parent = this;
+                        this.componentDict.Add(component.GetType(), component);
+                    }
+                }
             }
             catch (Exception e)
             {

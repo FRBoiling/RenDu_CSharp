@@ -1,5 +1,6 @@
 ﻿using Model.Base;
 using Model.Base.Object;
+using Model.Entity;
 
 namespace Model
 {

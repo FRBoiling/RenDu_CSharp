@@ -1,8 +1,8 @@
-﻿using Model.Component;
+﻿using Model.Base.Component;
 
-namespace Model
+namespace Model.Entity
 {
-    public sealed class Context : Entity
+    public sealed class Context : BaseEntity
     {
         public string Name { get; set; }
 

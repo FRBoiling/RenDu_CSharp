@@ -1,10 +1,11 @@
 ﻿using Model.Base.Component;
+using Model.Base.Entity;
 using System;
 using System.Collections.Generic;
 
 namespace Model.Base.Object
 {
-    public class ObjectPool : Entity
+    public class ObjectPool : BaseEntity
     {
         public string Name { get; set; }
 

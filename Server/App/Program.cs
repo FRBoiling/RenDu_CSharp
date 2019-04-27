@@ -4,6 +4,7 @@ using Model;
 using Model.Base;
 using Model.Base.Logger;
 using Model.Component;
+using Model.Component.Config;
 
 namespace App
 {
@@ -24,6 +25,9 @@ namespace App
             // 异步方法全部会回掉到主线程
             SynchronizationContext.SetSynchronizationContext(SingletonSynchronizationContext.Instance);
             Log.Debug($"current thread id {Thread.CurrentThread.ManagedThreadId}");
+
+            Options options = Server.Context.AddComponent<OptionComponent, string[]>(args).Options;
+            StartConfig startConfig = Server.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
 
             try
             {

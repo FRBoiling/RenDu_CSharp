@@ -59,11 +59,11 @@ namespace Model.Base.Component
             return this.Parent as T;
         }
 
-        public Entity Entity
+        public BaseEntity Entity
         {
             get
             {
-                return this.Parent as Entity;
+                return this.Parent as BaseEntity;
             }
         }
 

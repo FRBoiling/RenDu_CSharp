@@ -15,7 +15,7 @@ namespace Model.Component
     }
 
 
-    public class ConsoleComponent : Entity
+    public class ConsoleComponent : BaseEntity
     {
         public CancellationTokenSource CancellationTokenSource;
         public string Mode = "";
