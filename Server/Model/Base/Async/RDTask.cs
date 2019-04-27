@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Model.Async
+namespace Model.Base.Async
 {
     public struct RDTask<T> : IEquatable<RDTask<T>>
     {

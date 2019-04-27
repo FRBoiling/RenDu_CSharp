@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace Model.Helper
+namespace Model.Base.Helper
 {
     public static class DllHelper
     {

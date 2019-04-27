@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Util
+namespace Model.Base.Util
 {
     public class DoubleMap<K, V>
     {

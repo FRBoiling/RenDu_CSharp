@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Component
+namespace Model.Base.Component
 {
     public class ComponentQueue : AComponent
     {

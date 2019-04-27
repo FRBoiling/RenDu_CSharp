@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Text;
 
-namespace Model.Async
+namespace Model.Base.Async
 {
     public class RDTaskCompletionSource : IAwaiter
     {

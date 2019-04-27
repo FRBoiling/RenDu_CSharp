@@ -1,12 +1,10 @@
-﻿using Model.Logger;
+﻿using Model.Base.Logger;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security;
-using System.Text;
 
-namespace Model.Async
+namespace Model.Base.Async
 {
     public struct AsyncRDVoidMethodBuilder
     {

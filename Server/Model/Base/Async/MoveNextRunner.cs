@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Model.Async
+namespace Model.Base.Async
 {
     internal class MoveNextRunner<TStateMachine> where TStateMachine : IAsyncStateMachine
     {

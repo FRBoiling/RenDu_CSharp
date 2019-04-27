@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace Model.Object
+namespace Model.Base.Object
 {
     public abstract class AObject : ISupportInitialize
     {

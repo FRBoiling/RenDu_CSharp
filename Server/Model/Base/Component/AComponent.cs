@@ -1,9 +1,8 @@
-﻿using Model.Base;
-using Model.Helper;
-using Model.Object;
+﻿using Model.Base.Helper;
+using Model.Base.Object;
 using System;
 
-namespace Model.Component
+namespace Model.Base.Component
 {
     public abstract class AComponent : AObject, IDisposable
     {
@@ -28,7 +27,7 @@ namespace Model.Component
 
                 if (this.InstanceId == 0)
                 {
-                    this.InstanceId = IdGenerater.GenerateInstanceId();
+                    this.InstanceId = IdGeneraterHelper.GenerateInstanceId();
                 }
             }
         }
@@ -70,7 +69,7 @@ namespace Model.Component
 
         protected AComponent()
         {
-            this.InstanceId = IdGenerater.GenerateInstanceId();
+            this.InstanceId = IdGeneraterHelper.GenerateInstanceId();
         }
 
 

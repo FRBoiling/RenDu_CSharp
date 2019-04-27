@@ -1,4 +1,4 @@
-﻿using Model.System;
+﻿using Model.Base.System;
 
 namespace Model.Opcode
 {

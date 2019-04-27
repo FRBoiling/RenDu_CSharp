@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Helper
+namespace Model.Base.Helper
 {
     public static class StringHelper
     {

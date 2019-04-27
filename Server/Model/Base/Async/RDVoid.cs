@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Model.Async
+namespace Model.Base.Async
 {
     [AsyncMethodBuilder(typeof(AsyncRDVoidMethodBuilder))]
     public struct RDVoid

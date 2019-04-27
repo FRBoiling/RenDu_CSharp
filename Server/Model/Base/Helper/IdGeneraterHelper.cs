@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Helper
+namespace Model.Base.Helper
 {
-    class IdGenerater
+    class IdGeneraterHelper
     {
         private static long appId;
         public static long AppId

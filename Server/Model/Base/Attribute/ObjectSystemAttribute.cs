@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.RDAttribute
+namespace Model.Base.RDAttribute
 {
     public class ObjectSystemAttribute : BaseAttribute
     {

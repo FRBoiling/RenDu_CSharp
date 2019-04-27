@@ -1,9 +1,6 @@
-﻿using Model.Logger;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
-namespace Model.Logger
+namespace Model.Base.Logger
 {
     public static class Log
     {

@@ -1,12 +1,10 @@
-﻿using Model.Component;
-using Model.RDAttribute;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Model.Base.RDAttribute;
+using Model.Base.System;
+using Model.Component;
 
 namespace Model.System
 {
-	[ObjectSystem]
+    [ObjectSystem]
     public class ConsoleComponentAwakeSystem : AStartSystem<ConsoleComponent>
     {
         public override void Start(ConsoleComponent self)

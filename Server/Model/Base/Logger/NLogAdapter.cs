@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Logger
+namespace Model.Base.Logger
 {
     public class NLogAdapter : ILog
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.System
+namespace Model.Base.System
 {
     public interface IAwake
     {

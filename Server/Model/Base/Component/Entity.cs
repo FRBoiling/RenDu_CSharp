@@ -1,11 +1,9 @@
-﻿using Model.Base;
-using Model.Logger;
+﻿using Model.Base.Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace Model.Component
+namespace Model.Base.Component
 {
     public class Entity : AComponentWithId
     {

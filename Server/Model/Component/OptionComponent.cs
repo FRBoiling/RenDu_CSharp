@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Model.Base.System
+namespace Model.Component
 {
-    public interface IAwakeSystem
+    class OptionComponent
     {
-        Type Type();
     }
 }

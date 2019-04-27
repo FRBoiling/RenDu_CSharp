@@ -1,7 +1,7 @@
-﻿using Model.Async;
-using Model.Base;
-using Model.Helper;
-using Model.System;
+﻿using Model.Base;
+using Model.Base.Async;
+using Model.Base.Component;
+using Model.Base.Helper;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

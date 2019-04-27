@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 using Model;
 using Model.Base;
+using Model.Base.Logger;
 using Model.Component;
-using Model.Helper;
-using Model.Logger;
-using Model.System;
 
 namespace App
 {

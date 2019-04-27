@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Model.Util
+namespace Model.Base.Util
 {
     public class UnOrderMultiMap<T, K>
     {
