@@ -103,8 +103,7 @@ namespace Model.Base.Component
 
         public override string ToString()
         {
-            return "TODO:BOIL help mongohelpoer to json";
-            //return MongoHelper.ToJson(this);
+            return MongoHelper.ToJson(this);
         }
     }
 }

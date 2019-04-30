@@ -1,11 +1,12 @@
-﻿using Model.Message;
+﻿using Model.Base.Component;
+using Model.Base.Util;
+using Model.Message;
 using System;
 using System.Collections.Generic;
-using Model.Util;
 
 namespace Model.Opcode
 {
-    public class OpcodeTypeComponent : Component.AComponent
+    public class OpcodeTypeComponent : AComponent
     {
         private readonly DoubleMap<ushort, Type> opcodeTypes = new DoubleMap<ushort, Type>();
 

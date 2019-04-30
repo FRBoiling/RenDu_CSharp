@@ -1,10 +1,8 @@
-﻿using Model.Helper;
-using Model.Component;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
 using System.Net;
-using System.Text;
+using Model.Base.Component;
+using Model.Base.Helper;
 
 namespace Model.Network
 {
@@ -61,7 +59,7 @@ namespace Model.Network
 
         protected AChannel(AService service, ChannelType channelType)
         {
-            this.Id = IdGenerater.GenerateId();
+            this.Id = IdGeneraterHelper.GenerateId();
             this.ChannelType = channelType;
             this.Service = service;
         }

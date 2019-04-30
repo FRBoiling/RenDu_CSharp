@@ -1,8 +1,8 @@
-﻿using Model.Helper;
+﻿using Model.Base.Helper;
+using Model.Base.Logger;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Model.Logger;
 
 namespace Model.Network.Buffer
 {

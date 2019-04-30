@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Model.Base.Helper
 {
@@ -9,7 +7,7 @@ namespace Model.Base.Helper
     {
         public static string GetText(string key)
         {
-            string path = $"../Config/{key}.txt";
+            string path = $"../Config/{key}.xml";
             try
             {
                 string configStr = File.ReadAllText(path);

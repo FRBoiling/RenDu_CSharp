@@ -1,4 +1,4 @@
-﻿using Model.RDAttribute;
+﻿using Model.Base.RDAttribute;
 
 namespace Model.Message
 {

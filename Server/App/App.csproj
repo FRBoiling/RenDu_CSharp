@@ -6,6 +6,14 @@
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>../Bin</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>../Bin</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="NLog.config" Version="4.6.0" />
   </ItemGroup>

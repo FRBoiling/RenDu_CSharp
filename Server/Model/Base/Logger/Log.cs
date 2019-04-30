@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Base.Helper;
+using System;
 
 namespace Model.Base.Logger
 {
@@ -48,8 +49,7 @@ namespace Model.Base.Logger
 
         public static void Msg(object message)
         {
-            //TODO: protobuf 协议解析成str
-            globalLog.Debug(message.ToString());
+			globalLog.Debug(MongoHelper.ToJson(message));
         }
     }
 }

@@ -1,12 +1,12 @@
-﻿using Model.Helper;
-using Model.Message;
+﻿using Model.Message;
 using Model.Network.Buffer;
 using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using Model.Logger;
 using Model.Base;
+using Model.Base.Helper;
+using Model.Base.Logger;
 
 namespace Model.Network.TCP
 {

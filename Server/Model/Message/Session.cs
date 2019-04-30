@@ -1,6 +1,4 @@
-﻿using Model.Async;
-using Model.Helper;
-using Model.Network;
+﻿using Model.Network;
 using Model.Network.TCP;
 using Model.Opcode;
 using System;
@@ -9,12 +7,14 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading;
-using Model.Component;
-using Model.Logger;
+using Model.Base.Async;
+using Model.Base.Logger;
+using Model.Base.Helper;
+using Model.Base.Component;
 
 namespace Model.Message
 {
-    public sealed class Session : Entity
+    public sealed class Session : BaseEntity
     {
         private static int RpcId { get; set; }
         private AChannel channel;

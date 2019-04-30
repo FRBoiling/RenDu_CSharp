@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace Model.Base.Helper
 {
@@ -20,6 +17,15 @@ namespace Model.Base.Helper
         {
             byte[] dllBytes = File.ReadAllBytes("Protocol.dll");
             byte[] pdbBytes = File.ReadAllBytes("Protocol.pdb");
+            Assembly assembly = Assembly.Load(dllBytes, pdbBytes);
+            return assembly;
+        }
+
+
+        public static Assembly GetModelAssembly()
+        {
+            byte[] dllBytes = File.ReadAllBytes("Model.dll");
+            byte[] pdbBytes = File.ReadAllBytes("Model.pdb");
             Assembly assembly = Assembly.Load(dllBytes, pdbBytes);
             return assembly;
         }

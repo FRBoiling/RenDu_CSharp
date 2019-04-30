@@ -1,4 +1,4 @@
-﻿using Model.Component;
+﻿using Model.Base.Component;
 using System;
 using System.Net;
 

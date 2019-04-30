@@ -1,6 +1,6 @@
 ﻿using Microsoft.IO;
 using Model.Base;
-using Model.Logger;
+using Model.Base.Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;

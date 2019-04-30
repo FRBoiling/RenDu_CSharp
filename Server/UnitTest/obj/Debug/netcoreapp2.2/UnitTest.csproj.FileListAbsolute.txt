@@ -1,0 +1,14 @@
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\UnitTest.deps.json
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\UnitTest.runtimeconfig.json
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\UnitTest.runtimeconfig.dev.json
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\UnitTest.dll
+D:\GitHub\RenDu_CSharp\Server\UnitTest\bin\Debug\netcoreapp2.2\UnitTest.pdb
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.csprojAssemblyReference.cache
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.csproj.CoreCompileInputs.cache
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.AssemblyInfoInputs.cache
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.AssemblyInfo.cs
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.dll
+D:\GitHub\RenDu_CSharp\Server\UnitTest\obj\Debug\netcoreapp2.2\UnitTest.pdb
