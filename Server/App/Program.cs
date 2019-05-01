@@ -25,17 +25,15 @@ namespace App
 
             // 异步方法全部会回掉到主线程
             SynchronizationContext.SetSynchronizationContext(SingletonSynchronizationContext.Instance);
-            Log.Debug($"current thread id {Thread.CurrentThread.ManagedThreadId}");
-            Server.EventSystem.Add(DLLType.Model, typeof(DllHelper).Assembly);
-            //Server.EventSystem.Add(DLLType.Model, DllHelper.GetModelAssembly());
-            //Server.EventSystem.Add(DLLType.Hotfix, DllHelper.GetHotfixAssembly());
-
-            Options options = Server.Context.AddComponent<OptionComponent, string[]>(args).Options;
-            StartConfig startConfig = Server.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
-
+        
             try
             {
+                Log.Debug($"current thread id {Thread.CurrentThread.ManagedThreadId}");
                 Server.EventSystem.Add(DLLType.Model, typeof(Server).Assembly);
+                //Server.EventSystem.Add(DLLType.Hotfix, DllHelper.GetHotfixAssembly());
+
+                Options options = Server.Context.AddComponent<OptionComponent, string[]>(args).Options;
+                StartConfig startConfig = Server.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
 
                 //LogManager.Configuration.Variables["appType"] = $"{AppType}";
                 //LogManager.Configuration.Variables["appId"] = $"{AppId}";

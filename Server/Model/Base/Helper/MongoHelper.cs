@@ -5,6 +5,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace Model.Base.Helper
@@ -24,6 +25,7 @@ namespace Model.Base.Helper
                 BsonClassMap.LookupClassMap(type);
             }
         }
+
 
         public static string ToJson(object obj)
         {

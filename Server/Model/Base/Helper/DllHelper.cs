@@ -21,13 +21,5 @@ namespace Model.Base.Helper
             return assembly;
         }
 
-
-        public static Assembly GetModelAssembly()
-        {
-            byte[] dllBytes = File.ReadAllBytes("Model.dll");
-            byte[] pdbBytes = File.ReadAllBytes("Model.pdb");
-            Assembly assembly = Assembly.Load(dllBytes, pdbBytes);
-            return assembly;
-        }
     }
 }
