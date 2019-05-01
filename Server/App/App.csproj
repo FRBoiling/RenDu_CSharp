@@ -23,12 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Update="C:\Users\Boil\.nuget\packages\nlog.config\4.6.0\contentFiles\any\any\NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </AdditionalFiles>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
