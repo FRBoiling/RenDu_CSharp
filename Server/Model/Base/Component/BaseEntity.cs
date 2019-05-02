@@ -1,13 +1,19 @@
 ﻿using Model.Base.Logger;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Model.Base.Component
 {
+	[BsonIgnoreExtraElements]
     public class BaseEntity : AComponentWithId
     {
+        [BsonIgnoreIfNull]
         private Dictionary<Type, AComponent> componentDict = new Dictionary<Type, AComponent>();
+
+        [BsonElement("C")]
+        [BsonIgnoreIfNull]
         private HashSet<AComponent> components = new HashSet<AComponent>();
 
 

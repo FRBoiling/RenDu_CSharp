@@ -15,5 +15,15 @@
 /Tools/Proto2CS/.vs
 /Tools/Proto2CS/bin
 /Tools/Proto2CS/obj
-/ThirdParty/Google.Protobuf/bin/
+/ThirdParty/Google.Protobuf/bin
 /Bin/netcoreapp2.2
+/ThirdParty/MongoDBDriver/MongoDB.Bson/bin
+/ThirdParty/MongoDBDriver/MongoDB.Bson/obj
+/ThirdParty/MongoDBDriver/MongoDB.Driver/obj
+/ThirdParty/MongoDBDriver/MongoDB.Driver/bin
+/ThirdParty/MongoDBDriver/MongoDB.Driver.Core/obj
+/ThirdParty/MongoDBDriver/MongoDB.Driver.Core/bin
+/ThirdParty/MongoDBDriver/MongoDB.Driver.GridFS/obj
+/ThirdParty/MongoDBDriver/MongoDB.Driver.GridFS/bin
+/ThirdParty/MongoDBDriver/MongoDB.Driver.Legacy/obj
+/ThirdParty/MongoDBDriver/MongoDB.Driver.Legacy/bin

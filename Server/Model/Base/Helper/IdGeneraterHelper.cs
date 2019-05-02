@@ -1,6 +1,6 @@
 ﻿namespace Model.Base.Helper
 {
-    class IdGeneraterHelper
+    public class IdGeneraterHelper
     {
         private static long appId;
         public static long AppId

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{635EFD4F-45A1-4830-855F-D1209B8F31AE}"
 EndProject
@@ -13,7 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Protobuf", "..\ThirdParty\Google.Protobuf\Google.Protobuf.csproj", "{1E448E01-3F20-4075-8CDE-165660B2A3A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{EA37679D-5793-4DE6-A313-BF7E65641CA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{EA37679D-5793-4DE6-A313-BF7E65641CA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDBDriver", "MongoDBDriver", "{8A7ED253-CA10-46FA-B10E-E100FCBCC3E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Bson", "..\ThirdParty\MongoDBDriver\MongoDB.Bson\MongoDB.Bson.csproj", "{79F2824D-635D-4386-B63A-881EFCD0C4E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +45,18 @@ Global
 		{EA37679D-5793-4DE6-A313-BF7E65641CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA37679D-5793-4DE6-A313-BF7E65641CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA37679D-5793-4DE6-A313-BF7E65641CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F2824D-635D-4386-B63A-881EFCD0C4E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F2824D-635D-4386-B63A-881EFCD0C4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F2824D-635D-4386-B63A-881EFCD0C4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F2824D-635D-4386-B63A-881EFCD0C4E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1E448E01-3F20-4075-8CDE-165660B2A3A2} = {4DF8B6C6-30AE-4C19-A731-09D5614CAE11}
+		{8A7ED253-CA10-46FA-B10E-E100FCBCC3E1} = {4DF8B6C6-30AE-4C19-A731-09D5614CAE11}
+		{79F2824D-635D-4386-B63A-881EFCD0C4E7} = {8A7ED253-CA10-46FA-B10E-E100FCBCC3E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4FFCD01-5930-4D7D-970D-1C1597F0E323}

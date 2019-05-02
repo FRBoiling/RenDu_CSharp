@@ -1,16 +1,21 @@
 ﻿using Model.Base.Helper;
 using Model.Base.Object;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Diagnostics;
 
 namespace Model.Base.Component
 {
+    [BsonIgnoreExtraElements]
     public abstract class AComponent : AObject, IDisposable
     {
+		[BsonIgnore]
         public long InstanceId { get; private set; }
 
+		[BsonIgnore]
         private bool isFromPool;
 
+		[BsonIgnore]
         public bool IsFromPool
         {
             get
@@ -33,6 +38,7 @@ namespace Model.Base.Component
             }
         }
 
+		[BsonIgnore]
         public bool IsDisposed
         {
             get
@@ -43,6 +49,7 @@ namespace Model.Base.Component
 
         private AComponent parent;
 
+		[BsonIgnore]
         public AComponent Parent
         {
             get
@@ -60,6 +67,7 @@ namespace Model.Base.Component
             return this.Parent as T;
         }
 
+		[BsonIgnore]
         public BaseEntity Entity
         {
             get

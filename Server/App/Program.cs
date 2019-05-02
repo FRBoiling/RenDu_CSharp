@@ -2,9 +2,11 @@
 using System.Threading;
 using Model;
 using Model.Base;
+using Model.Base.Helper;
 using Model.Base.Logger;
 using Model.Component;
 using Model.Component.Config;
+using NLog;
 
 namespace App
 {
@@ -34,19 +36,32 @@ namespace App
                 Options options = Server.Context.AddComponent<OptionComponent, string[]>(args).Options;
                 StartConfig startConfig = Server.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
 
-                //LogManager.Configuration.Variables["appType"] = $"{AppType}";
-                //LogManager.Configuration.Variables["appId"] = $"{AppId}";
-                //LogManager.Configuration.Variables["appTypeFormat"] = $"{AppType,-8}";
-                //LogManager.Configuration.Variables["appIdFormat"] = $"{AppId:0000}";
-                //while (true)
-                //{
-                //    Log.Trace($"server start.............Trace........... {AppId} {AppType}");
-                //    Log.Debug($"server start.............Debug........... {AppId} {AppType}");
-                //    Log.Info($"server start.............Info............ {AppId} {AppType}");
-                //    Log.Warn($"server start.............Warn........... {AppId} {AppType}");
-                //    Log.Error($"server start.............Error........... {AppId} {AppType}");
-                //    Log.Fatal($"server start.............Fatal........... {AppId} {AppType}");
-                //}
+                if (!options.AppType.Is(startConfig.AppType))
+                {
+                    Log.Error("命令行参数apptype与配置不一致");
+                    return;
+                }
+
+                IdGeneraterHelper.AppId = options.AppId;
+
+                LogManager.Configuration.Variables["appType"] = $"{startConfig.AppType}";
+                LogManager.Configuration.Variables["appId"] = $"{startConfig.AppId}";
+                LogManager.Configuration.Variables["appTypeFormat"] = $"{startConfig.AppType,-8}";
+                LogManager.Configuration.Variables["appIdFormat"] = $"{startConfig.AppId:0000}";
+
+                Log.Info($"server start........................ {startConfig.AppId} {startConfig.AppType}");
+
+
+                Server.Context.AddComponent<TimerComponent>();
+                Server.Context.AddComponent<OpcodeTypeComponent>();
+                Server.Context.AddComponent<MessageDispatcherComponent>();
+
+
+                // 根据不同的AppType添加不同的组件
+                OuterConfig outerConfig = startConfig.GetComponent<OuterConfig>();
+                InnerConfig innerConfig = startConfig.GetComponent<InnerConfig>();
+                ClientConfig clientConfig = startConfig.GetComponent<ClientConfig>();
+
 
                 Server.Context.AddComponent<ConsoleComponent>();
 
