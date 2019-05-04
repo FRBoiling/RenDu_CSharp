@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace Model.Base.Util
 {
-    public class UnOrderMultiMap<T, K>
+    public class MultiMap<T, K>
     {
-        private readonly Dictionary<T, List<K>> dictionary = new Dictionary<T, List<K>>();
+        private readonly SortedDictionary<T, List<K>> dictionary = new SortedDictionary<T, List<K>>();
 
         // 重用list
         private readonly Queue<List<K>> queue = new Queue<List<K>>();
 
-        public Dictionary<T, List<K>> GetDictionary()
+        public SortedDictionary<T, List<K>> GetDictionary()
         {
             return this.dictionary;
         }
@@ -30,6 +30,11 @@ namespace Model.Base.Util
         public KeyValuePair<T, List<K>> First()
         {
             return this.dictionary.First();
+        }
+
+        public T FirstKey()
+        {
+            return this.dictionary.Keys.First();
         }
 
         public int Count
@@ -153,11 +158,8 @@ namespace Model.Base.Util
 
         public void Clear()
         {
-            foreach (KeyValuePair<T, List<K>> keyValuePair in this.dictionary)
-            {
-                this.RecycleList(keyValuePair.Value);
-            }
-            this.dictionary.Clear();
+            dictionary.Clear();
         }
     }
+
 }

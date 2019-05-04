@@ -60,8 +60,6 @@ namespace App
                 // 根据不同的AppType添加不同的组件
                 OuterConfig outerConfig = startConfig.GetComponent<OuterConfig>();
                 InnerConfig innerConfig = startConfig.GetComponent<InnerConfig>();
-                ClientConfig clientConfig = startConfig.GetComponent<ClientConfig>();
-
 
                 Server.Context.AddComponent<ConsoleComponent>();
 
