@@ -6,6 +6,8 @@ using Model.Base.Helper;
 using Model.Base.Logger;
 using Model.Component;
 using Model.Component.Config;
+using Model.Message.Network;
+using Model.Network;
 using NLog;
 
 namespace App
@@ -56,12 +58,16 @@ namespace App
                 Server.Context.AddComponent<OpcodeTypeComponent>();
                 Server.Context.AddComponent<MessageDispatcherComponent>();
 
+                Server.Context.AddComponent<ConsoleComponent>();
 
-                // 根据不同的AppType添加不同的组件
+                //TODO:BOIL 根据不同的AppType添加不同的组件
                 OuterConfig outerConfig = startConfig.GetComponent<OuterConfig>();
                 InnerConfig innerConfig = startConfig.GetComponent<InnerConfig>();
 
-                Server.Context.AddComponent<ConsoleComponent>();
+                //Server.Context.AddComponent<AppManagerComponent>();
+                Server.Context.AddComponent<NetInnerComponent, string>(innerConfig.Address);
+                Server.Context.AddComponent<NetOuterComponent, string>(outerConfig.Address);
+
 
                 while (true)
                 {
