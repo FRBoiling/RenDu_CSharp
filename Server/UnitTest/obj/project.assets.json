@@ -5840,7 +5840,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Boil\\.nuget\\packages\\": {},
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5849,14 +5849,14 @@
       "projectUniqueName": "D:\\GitHub\\RenDu_CSharp\\Server\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
       "projectPath": "D:\\GitHub\\RenDu_CSharp\\Server\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\Boil\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\RenDu_CSharp\\Server\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Boil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,4 +1,5 @@
 ﻿using Model.Base.Component;
+using Model.Component.Config;
 using Model.Message;
 using Model.Network.TCP;
 using System;
@@ -62,6 +63,24 @@ namespace Model.Network
                 throw new Exception($"NetworkComponent Awake Error {address}", e);
             }
         }
+
+
+        public void Awake()
+        {
+            Awake(NetworkProtocolType.TCP, Packet.PacketSizeLength4);
+            MessagePacker = new MongoPacker();
+            MessageDispatcher = new InnerMessageDispatcher();
+            AppType = StartConfigComponent.Instance.StartConfig.AppType;
+        }
+
+        public void Awake(string address)
+        {
+            Awake(NetworkProtocolType.TCP, address, Packet.PacketSizeLength4);
+            MessagePacker = new MongoPacker();
+            MessageDispatcher = new InnerMessageDispatcher();
+            AppType = StartConfigComponent.Instance.StartConfig.AppType;
+        }
+
 
         public int Count
         {
