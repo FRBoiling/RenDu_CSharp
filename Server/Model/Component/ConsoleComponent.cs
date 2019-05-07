@@ -76,7 +76,7 @@ namespace Model.Component
                         case "reload":
                             try
                             {
-                                Server.EventSystem.Add(DLLType.Hotfix, DllHelper.GetHotfixAssembly());
+                                Actor.EventSystem.Add(DLLType.Hotfix, DllHelper.GetHotfixAssembly());
                             }
                             catch (Exception e)
                             {

@@ -17,7 +17,7 @@ namespace Model.Opcode
             this.opcodeTypes.Clear();
             this.typeMessages.Clear();
 
-            List<Type> types = Server.EventSystem.GetTypes(typeof(MessageAttribute));
+            List<Type> types = Actor.EventSystem.GetTypes(typeof(MessageAttribute));
             foreach (Type type in types)
             {
                 object[] attrs = type.GetCustomAttributes(typeof(MessageAttribute), false);

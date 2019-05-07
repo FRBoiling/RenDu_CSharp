@@ -32,11 +32,11 @@ namespace App
             try
             {
                 Log.Debug($"current thread id {Thread.CurrentThread.ManagedThreadId}");
-                Server.EventSystem.Add(DLLType.Model, typeof(Server).Assembly);
+                Actor.EventSystem.Add(DLLType.Model, typeof(Actor).Assembly);
                 //Server.EventSystem.Add(DLLType.Hotfix, DllHelper.GetHotfixAssembly());
 
-                Options options = Server.Context.AddComponent<OptionComponent, string[]>(args).Options;
-                StartConfig startConfig = Server.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
+                Options options = Actor.Context.AddComponent<OptionComponent, string[]>(args).Options;
+                StartConfig startConfig = Actor.Context.AddComponent<StartConfigComponent, string, int>(options.Config, options.AppId).StartConfig;
 
                 if (!options.AppType.Is(startConfig.AppType))
                 {
@@ -54,19 +54,19 @@ namespace App
                 Log.Info($"server start........................ {startConfig.AppId} {startConfig.AppType}");
 
 
-                Server.Context.AddComponent<TimerComponent>();
-                Server.Context.AddComponent<OpcodeTypeComponent>();
-                Server.Context.AddComponent<MessageDispatcherComponent>();
+                Actor.Context.AddComponent<TimerComponent>();
+                Actor.Context.AddComponent<OpcodeTypeComponent>();
+                Actor.Context.AddComponent<MessageDispatcherComponent>();
 
-                Server.Context.AddComponent<ConsoleComponent>();
+                Actor.Context.AddComponent<ConsoleComponent>();
 
                 //TODO:BOIL 根据不同的AppType添加不同的组件
                 OuterConfig outerConfig = startConfig.GetComponent<OuterConfig>();
                 InnerConfig innerConfig = startConfig.GetComponent<InnerConfig>();
 
                 //Server.Context.AddComponent<AppManagerComponent>();
-                Server.Context.AddComponent<NetInnerComponent, string>(innerConfig.Address);
-                Server.Context.AddComponent<NetOuterComponent, string>(outerConfig.Address);
+                Actor.Context.AddComponent<NetInnerComponent, string>(innerConfig.Address);
+                Actor.Context.AddComponent<NetOuterComponent, string>(outerConfig.Address);
 
 
                 while (true)
@@ -75,7 +75,7 @@ namespace App
                     {
                         Thread.Sleep(1);
                         SingletonSynchronizationContext.Instance.Update();
-                        Server.EventSystem.Update();
+                        Actor.EventSystem.Update();
                     }
                     catch (Exception e)
                     {

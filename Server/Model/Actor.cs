@@ -4,7 +4,7 @@ using Model.Entity;
 
 namespace Model
 {
-    public static class Server
+    public static class Actor
     {
         private static Context context;
 

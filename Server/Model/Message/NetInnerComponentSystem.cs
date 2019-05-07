@@ -25,4 +25,23 @@ namespace Model.Message
         }
     }
 
+    [ObjectSystem]
+    public class NetInnerComponentLoadSystem : ALoadSystem<NetInnerComponent>
+    {
+        public override void Load(NetInnerComponent self)
+        {
+            self.MessagePacker = new MongoPacker();
+            self.MessageDispatcher = new InnerMessageDispatcher();
+        }
+    }
+
+    [ObjectSystem]
+    public class NetInnerComponentUpdateSystem : AUpdateSystem<NetInnerComponent>
+    {
+        public override void Update(NetInnerComponent self)
+        {
+            self.Update();
+        }
+    }
+
 }

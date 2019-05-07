@@ -64,24 +64,6 @@ namespace Model.Network
             }
         }
 
-
-        public void Awake()
-        {
-            Awake(NetworkProtocolType.TCP, Packet.PacketSizeLength4);
-            MessagePacker = new MongoPacker();
-            MessageDispatcher = new InnerMessageDispatcher();
-            AppType = StartConfigComponent.Instance.StartConfig.AppType;
-        }
-
-        public void Awake(string address)
-        {
-            Awake(NetworkProtocolType.TCP, address, Packet.PacketSizeLength4);
-            MessagePacker = new MongoPacker();
-            MessageDispatcher = new InnerMessageDispatcher();
-            AppType = StartConfigComponent.Instance.StartConfig.AppType;
-        }
-
-
         public int Count
         {
             get { return this.sessions.Count; }

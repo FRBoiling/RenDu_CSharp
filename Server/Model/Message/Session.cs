@@ -248,15 +248,7 @@ namespace Model.Message
 
             if (OpcodeHelper.IsNeedDebugLogMessage(opcode))
             {
-#if !SERVER
-                if (OpcodeHelper.IsClientHotfixMessage(opcode))
-                {
-                }
-                else
-#endif
-                {
                     Log.Msg(message);
-                }
             }
 
             MemoryStream stream = this.Stream;
@@ -269,15 +261,13 @@ namespace Model.Message
             opcodeBytes.WriteTo(0, opcode);
             Array.Copy(opcodeBytes, 0, stream.GetBuffer(), 0, opcodeBytes.Length);
 
-#if SERVER
-			// 如果是allserver，内部消息不走网络，直接转给session,方便调试时看到整体堆栈
-			if (this.Network.AppType == AppType.AllServer)
-			{
-				Session session = this.Network.Entity.GetComponent<NetInnerComponent>().Get(this.RemoteAddress);
-				session.Run(stream);
-				return;
-			}
-#endif
+            // 如果是allserver，内部消息不走网络，直接转给session,方便调试时看到整体堆栈
+            if (this.Network.AppType == AppType.AllServer)
+            {
+                Session session = this.Network.Entity.GetComponent<NetInnerComponent>().Get(this.RemoteAddress);
+                session.Run(stream);
+                return;
+            }
 
             this.Send(stream);
         }

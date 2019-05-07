@@ -5,7 +5,6 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 
 namespace Model.Base.Helper
@@ -14,7 +13,7 @@ namespace Model.Base.Helper
     {
         static MongoHelper()
         {
-            Type[] types = typeof(Server).Assembly.GetTypes();
+            Type[] types = typeof(Actor).Assembly.GetTypes();
             foreach (Type type in types)
             {
                 if (!type.IsSubclassOf(typeof(AComponent)))
