@@ -19,14 +19,14 @@ namespace Model.Base.Component
                 component = (AComponent)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Parent = parent;
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component);
+            SystemContext.EventSystem.Awake(component);
             return component;
         }
 
@@ -37,21 +37,21 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Parent = parent;
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component);
+            SystemContext.EventSystem.Awake(component);
             return component;
         }
 
@@ -62,21 +62,21 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Parent = parent;
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a);
+            SystemContext.EventSystem.Awake(component, a);
             return component;
         }
 
@@ -87,21 +87,21 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Parent = parent;
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a, b);
+            SystemContext.EventSystem.Awake(component, a, b);
             return component;
         }
 
@@ -112,21 +112,21 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Parent = parent;
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a, b, c);
+            SystemContext.EventSystem.Awake(component, a, b, c);
             return component;
         }
 
@@ -137,20 +137,20 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component);
+            SystemContext.EventSystem.Awake(component);
             return component;
         }
 
@@ -161,20 +161,20 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a);
+            SystemContext.EventSystem.Awake(component, a);
             return component;
         }
 
@@ -185,20 +185,20 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a, b);
+            SystemContext.EventSystem.Awake(component, a, b);
             return component;
         }
 
@@ -209,20 +209,20 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             if (component is AComponentWithId componentWithId)
             {
                 componentWithId.Id = component.InstanceId;
             }
-            Actor.EventSystem.Awake(component, a, b, c);
+            SystemContext.EventSystem.Awake(component, a, b, c);
             return component;
         }
 
@@ -233,17 +233,17 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Id = id;
-            Actor.EventSystem.Awake(component);
+            SystemContext.EventSystem.Awake(component);
             return component;
         }
 
@@ -254,17 +254,17 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Id = id;
-            Actor.EventSystem.Awake(component, a);
+            SystemContext.EventSystem.Awake(component, a);
             return component;
         }
 
@@ -275,17 +275,17 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Id = id;
-            Actor.EventSystem.Awake(component, a, b);
+            SystemContext.EventSystem.Awake(component, a, b);
             return component;
         }
 
@@ -296,17 +296,17 @@ namespace Model.Base.Component
             T component;
             if (fromPool)
             {
-                component = (T)Actor.ObjectPool.Fetch(type);
+                component = (T)SystemContext.ObjectPool.Fetch(type);
             }
             else
             {
                 component = (T)Activator.CreateInstance(type);
             }
 
-            Actor.EventSystem.Add(component);
+            SystemContext.EventSystem.Add(component);
 
             component.Id = id;
-            Actor.EventSystem.Awake(component, a, b, c);
+            SystemContext.EventSystem.Awake(component, a, b, c);
             return component;
         }
     }

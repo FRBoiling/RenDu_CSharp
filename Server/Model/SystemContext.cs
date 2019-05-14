@@ -4,20 +4,20 @@ using Model.Entity;
 
 namespace Model
 {
-    public static class Actor
+    public static class SystemContext
     {
-        private static Context context;
+        private static SystemEntity systemEntity;
 
-        public static Context Context
+        public static SystemEntity SystemEntity
         {
             get
             {
-                if (context != null)
+                if (systemEntity != null)
                 {
-                    return context;
+                    return systemEntity;
                 }
-                context = new Context();
-                return context;
+                systemEntity = new SystemEntity();
+                return systemEntity;
             }
         }
 
@@ -43,10 +43,10 @@ namespace Model
 
         public static void Close()
         {
-            context.Dispose();
-            context = null;
-            eventSystem = null;
+            systemEntity.Dispose();
+            systemEntity = null;
             objectPool = null;
+            eventSystem = null;
         }
     }
 }

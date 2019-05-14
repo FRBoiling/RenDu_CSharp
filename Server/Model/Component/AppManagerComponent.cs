@@ -22,7 +22,7 @@ namespace Model.Component
 
             foreach (StartConfig startConfig in startConfigs)
             {
-                Actor.Context.GetComponent<TimerComponent>().WaitAsync(100);
+                SystemContext.Context.GetComponent<TimerComponent>().WaitAsync(100);
 
                 if (!ips.Contains(startConfig.ServerIP) && startConfig.ServerIP != "*")
                 {
@@ -42,7 +42,7 @@ namespace Model.Component
 
         private void StartProcess(int appId)
         {
-            OptionComponent optionComponent = Actor.Context.GetComponent<OptionComponent>();
+            OptionComponent optionComponent = SystemContext.Context.GetComponent<OptionComponent>();
             StartConfigComponent startConfigComponent = StartConfigComponent.Instance;
             string configFile = optionComponent.Options.Config;
             StartConfig startConfig = startConfigComponent.Get(appId);
@@ -70,7 +70,7 @@ namespace Model.Component
 
             while (true)
             {
-                await Actor.Context.GetComponent<TimerComponent>().WaitAsync(5000);
+                await SystemContext.Context.GetComponent<TimerComponent>().WaitAsync(5000);
 
                 if (this.InstanceId != instanceId)
                 {

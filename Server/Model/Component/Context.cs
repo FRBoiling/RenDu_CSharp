@@ -2,15 +2,15 @@
 
 namespace Model.Entity
 {
-    public sealed class Context : BaseEntity
+    public sealed class SystemEntity : BaseEntity
     {
         public string Name { get; set; }
 
-        public Context()
+        public SystemEntity()
         {
         }
 
-        public Context(long id) : base(id)
+        public SystemEntity(long id) : base(id)
         {
         }
 

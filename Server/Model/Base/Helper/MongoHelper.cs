@@ -13,7 +13,7 @@ namespace Model.Base.Helper
     {
         static MongoHelper()
         {
-            Type[] types = typeof(Actor).Assembly.GetTypes();
+            Type[] types = typeof(SystemContext).Assembly.GetTypes();
             foreach (Type type in types)
             {
                 if (!type.IsSubclassOf(typeof(AComponent)))

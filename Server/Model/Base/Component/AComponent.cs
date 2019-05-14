@@ -90,15 +90,15 @@ namespace Model.Base.Component
             }
 
             // 触发Destroy事件
-            Actor.EventSystem.Destroy(this);
+            SystemContext.EventSystem.Destroy(this);
 
-            Actor.EventSystem.Remove(this.InstanceId);
+            SystemContext.EventSystem.Remove(this.InstanceId);
 
             this.InstanceId = 0;
 
             if (this.IsFromPool)
             {
-                Actor.ObjectPool.Recycle(this);
+                SystemContext.ObjectPool.Recycle(this);
             }
             else
             {
@@ -107,7 +107,7 @@ namespace Model.Base.Component
 
         public override void EndInit()
         {
-            Actor.EventSystem.Deserialize(this);
+            SystemContext.EventSystem.Deserialize(this);
         }
 
         public override string ToString()
